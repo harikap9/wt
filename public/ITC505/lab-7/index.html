@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>🕵️ Noir Detective Mystery Generator</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+            rel="stylesheet" />
+        <style>
+                :root {
+                    --primary-color: #1f2937;
+                    --secondary-color: #374151;
+                    --accent-color: #dc2626;
+                    --background-color: #f3f4f6;
+                    --text-color: #111827;
+                }
+
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+
+                .container {
+                    background-color: #f9fafb;
+                    border: 2px solid var(--primary-color);
+                    border-radius: 5px;
+                    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+                    padding: 2rem;
+                    width: 100%;
+                    max-width: 500px;
+                    margin-bottom: 2rem;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .container::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 5px;
+                    background: linear-gradient(to right, var(--accent-color), var(--primary-color));
+                }
+
+                .addendum-container {
+                    background-color: #f9fafb;
+                    border: 2px solid var(--primary-color);
+                    border-radius: 5px;
+                    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+                    padding: 2rem;
+                    width: 100%;
+                    max-width: 900px;
+                    margin: 0 auto;
+                }
+
+                body {
+                    font-family: 'Courier Prime', monospace;
+                    background-color: var(--background-color);
+                    color: var(--text-color);
+                    line-height: 1.6;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100vh;
+                    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://ideogram.ai/assets/image/lossless/response/1_YQf_RN2ST-M7lBmAcfVjg');
+                    background-size: cover;
+                    background-position: center;
+                    background-attachment: fixed;
+                    padding: 2rem 1rem;
+                }
+
+                @keyframes slideIn {
+                    from { transform: translateY(20px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+
+                h1 {
+                    text-align: center;
+                    color: var(--accent-color);
+                    margin-bottom: 1.5rem;
+                    font-size: 2rem;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    position: relative;
+                }
+
+                h1::after {
+                    content: '🕵️';
+                    margin-left: 10px;
+                    font-size: 1.5rem;
+                }
+
+                .form-group {
+                    margin-bottom: 1rem;
+                    position: relative;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    color: var(--secondary-color);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    letter-spacing: 1px;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 0.75rem;
+                    border: 2px solid var(--primary-color);
+                    border-radius: 3px;
+                    font-family: 'Courier Prime', monospace;
+                    background-color: #f3f4f6;
+                    transition: all 0.3s ease;
+                }
+
+                input:focus {
+                    outline: none;
+                    border-color: var(--accent-color);
+                    box-shadow: 0 0 0 3px rgba(220,38,38,0.1);
+                }
+
+                button {
+                    width: 100%;
+                    padding: 0.75rem;
+                    background-color: var(--primary-color);
+                    color: white;
+                    border: none;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    transition: all 0.3s ease;
+                    margin-top: 1rem;
+                }
+
+                button:hover {
+                    background-color: var(--accent-color);
+                    transform: translateY(-3px);
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Noir Mystery Generator</h1>
+
+            <form method="POST" action="/ITC505/lab-7/index.html">
+                <div class="form-group">
+                    <label for="adjective1">🔍 Gritty Adjective:</label>
+                    <input
+                        type="text"
+                        id="adjective1"
+                        name="adjective1"
+                        placeholder="Cunning, shadowy, ruthless..."
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="noun1">🎩 Character Type:</label>
+                    <input
+                        type="text"
+                        id="noun1"
+                        name="noun1"
+                        placeholder="Detective, informant, gangster..."
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="verb1">🚬 Action Verb:</label>
+                    <input
+                        type="text"
+                        id="verb1"
+                        name="verb1"
+                        placeholder="Investigate, interrogate, pursue..."
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="adverb1">🌃 Manner Adverb:</label>
+                    <input
+                        type="text"
+                        id="adverb1"
+                        name="adverb1"
+                        placeholder="Cunningly, silently, relentlessly..."
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="noun2">🔑 Mysterious Object:</label>
+                    <input
+                        type="text"
+                        id="noun2"
+                        name="noun2"
+                        placeholder="Briefcase, document, photograph..."
+                        required />
+                </div>
+
+                <button type="submit">Crack the Case 🕵️</button>
+            </form>
+        </div>
+
+        <div class="addendum-container">
+            <div class="addendum">
+                <h2>Case File: Development Methodology</h2>
+                <ul>
+                    <li>
+                        <strong>Design Philosophy:</strong> Crafted a minimalist interface that echoes the stark, 
+                        high-contrast aesthetics of classic film noir detective narratives.
+                    </li>
+                    <li>
+                        <strong>Typographic Strategy:</strong> Employed Courier Prime to evoke the typewritten 
+                        reports and case files characteristic of mid-20th century investigative work.
+                    </li>
+                    <li>
+                        <strong>Interactive Mechanics:</strong> Implemented precision-focused input mechanisms 
+                        that mirror the meticulous nature of detective work.
+                    </li>
+                    <li>
+                        <strong>Color Psychology:</strong> Utilized a restrained color palette emphasizing 
+                        shadows, contrast, and suggestive visual tension.
+                    </li>
+                    <li>
+                        <strong>User Experience Narrative:</strong> Designed an immersive journey that transforms 
+                        form-filling into a detective's investigative process.
+                    </li>
+                    <li>
+                        <strong>Responsive Architecture:</strong> Engineered a fluid interface that maintains 
+                        investigative integrity across diverse digital landscapes.
+                    </li>
+                </ul>
+
+                <p id="lastModified"></p>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var x = document.lastModified;
+            document.getElementById('lastModified').textContent = "Last Updated: " + x;
+        </script>
+    </body>
+</html>
